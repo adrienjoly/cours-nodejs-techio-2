@@ -2,11 +2,18 @@
 
 set -e # stop script on any non-zero exit code
 
+function test {
+  # Hide TECHIO messages to students, from printMessage()
+  HIDE_TECHIO_MESSAGES=1 \
+  CODE_FILE="$1.solution.js" \
+  node_modules/mocha/bin/mocha "$1.spec.js"
+}
+
 cd nodejs-project
-CODE_FILE="1-api-req.solution.js" node_modules/mocha/bin/mocha 1-api-req.spec.js
-CODE_FILE="2-callback-error.solution.js" node_modules/mocha/bin/mocha 2-callback-error.spec.js
-CODE_FILE="3-promise.solution.js" node_modules/mocha/bin/mocha 3-promise.spec.js
-CODE_FILE="4-promise-error.solution.js" node_modules/mocha/bin/mocha 4-promise-error.spec.js
-CODE_FILE="5-await.solution.js" node_modules/mocha/bin/mocha 5-await.spec.js
-CODE_FILE="6-await-error.solution.js" node_modules/mocha/bin/mocha 6-await-error.spec.js
-CODE_FILE="7-complete.solution.js" node_modules/mocha/bin/mocha 7-complete.spec.js
+test "1-api-req"
+test "2-callback-error"
+test "3-promise"
+test "4-promise-error"
+test "5-await"
+test "6-await-error"
+test "7-complete"

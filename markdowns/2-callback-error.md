@@ -12,5 +12,3 @@ Modifiez le code ci-dessous puis cliquez sur "Run" pour le tester:
   "stubs": ["2-callback-error.js"],
   "command": "node_modules/mocha/bin/mocha 2-callback-error.spec.js"
 })
-
-Une fois que les tests passent, réalisez l'exercice suivant.

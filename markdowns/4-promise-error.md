@@ -12,5 +12,3 @@ Modifiez le code ci-dessous puis cliquez sur "Run" pour le tester:
   "stubs": ["4-promise-error.js"],
   "command": "node_modules/mocha/bin/mocha 4-promise-error.spec.js"
 })
-
-Une fois que les tests passent, réalisez l'exercice suivant.

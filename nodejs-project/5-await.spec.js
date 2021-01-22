@@ -1,5 +1,5 @@
 ﻿const expect = require("expect.js");
-const { printMessage, getStubFile, getStudentCode, runStudentCode } = require("./common/techio");
+const { congratulateStudent, getStubFile, getStudentCode, runStudentCode } = require("./common/techio");
 
 const EXPECTED_RESPONSE = require("./common/expected-response.js")
 
@@ -33,7 +33,6 @@ describe("le programme devrait", () => {
     const code = await getStudentCode(CODE_FILE);
     expect(code).to.match(/await fetch\(/);
     expect(code).to.not.match(/\.then\(/);
-    printMessage(`👌 Nickel ! Ton code valide tout ce qui était demandé !`);
-    printMessage(`Tu peux passer à l'exercice suivant.`);
+    congratulateStudent();
   });
 });

@@ -1,6 +1,6 @@
 ﻿const expect = require("expect.js");
 const {
-  printMessage,
+  congratulateStudent,
   getStubFile,
   getStudentCode,
   runStudentCode,
@@ -38,7 +38,6 @@ describe("le programme devrait", () => {
     expect(code).to.match(/await fetch\(/);
     expect(code).to.not.match(/\.then\(/);
     expect(code).to.not.match(/\.catch\(/);
-    printMessage(`👌 Nickel ! Ton code valide tout ce qui était demandé !`);
-    printMessage(`Tu peux passer à l'exercice suivant.`);
+    congratulateStudent();
   });
 });

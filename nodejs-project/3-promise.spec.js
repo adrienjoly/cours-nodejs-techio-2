@@ -1,5 +1,5 @@
 ﻿const expect = require("expect.js");
-const { printMessage, getStubFile, runStudentCode } = require("./common/techio");
+const { congratulateStudent, getStubFile, runStudentCode } = require("./common/techio");
 
 const EXPECTED_RESPONSE = require("./common/expected-response.js")
 
@@ -27,7 +27,6 @@ describe("le programme devrait", () => {
   it("afficher la réponse de l'API", () => {
     const json = JSON.parse(program.getLogs().join("").trim());
     expect(json).to.eql(EXPECTED_RESPONSE);
-    printMessage(`👌 Nickel ! Ton code valide tout ce qui était demandé !`);
-    printMessage(`Tu peux passer à l'exercice suivant.`);
+    congratulateStudent();
   });
 });

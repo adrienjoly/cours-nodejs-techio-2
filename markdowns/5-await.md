@@ -12,5 +12,3 @@ Modifiez le code ci-dessous puis cliquez sur "Run" pour le tester:
   "stubs": ["5-await.js"],
   "command": "node_modules/mocha/bin/mocha 5-await.spec.js"
 })
-
-Une fois que les tests passent, réalisez l'exercice suivant.

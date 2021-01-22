@@ -1,5 +1,5 @@
 ﻿const expect = require("expect.js");
-const { printMessage, getStubFile, runStudentCode } = require("./common/techio");
+const { congratulateStudent, getStubFile, runStudentCode } = require("./common/techio");
 
 const CODE_FILE = process.env.CODE_FILE || getStubFile(__filename); // "./4-promise-error.js";
 
@@ -20,7 +20,6 @@ describe("le programme devrait", () => {
 
   it("permettre de savoir que le serveur interrogé n'existe pas", () => {
     expect(program.getLogs().join("")).to.match(/ENOTFOUND/);
-    printMessage(`👌 Nickel ! Ton code valide tout ce qui était demandé !`);
-    printMessage(`Tu peux passer à l'exercice suivant.`);
+    congratulateStudent();
   });
 });

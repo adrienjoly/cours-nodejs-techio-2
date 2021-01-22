@@ -15,5 +15,3 @@ Modifiez le code ci-dessous puis cliquez sur "Run" pour le tester:
   "stubs": ["7-complete.js"],
   "command": "node_modules/mocha/bin/mocha 7-complete.spec.js"
 })
-
-Une fois que les tests passent, réalisez l'exercice suivant.
