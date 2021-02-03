@@ -1,6 +1,7 @@
-const https = require('https');
+const request = require('request');
 
-https.get('https://serveur-inexistant.xyz', (res) => {
-  // TODO: récupérer le code d'erreur de l'API puis l'afficher
+request('https://serveur-inexistant.xyz', (error, response, body) => {
+
+  // TODO: récupérer l'erreur de l'API puis l'afficher
   console.log('afficher l\'erreur à la place de cette chaîne de caractères');
 });

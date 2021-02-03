@@ -4,7 +4,7 @@ Cours: [adrienjoly.com/cours-nodejs](https://adrienjoly.com/cours-nodejs/02-asyn
 
 Sur la base de votre solution précédente, écrivez un programme Node.js qui:
 - envoie une requête HTTP GET à un serveur qui n'existe pas;
-- affiche dans la sortie standard l'erreur retournée par `https.get()` suite à l'échec de cette requête.
+- affiche dans la sortie standard l'erreur retournée par l'appel à `request()` suite à l'échec de cette requête.
 
 Modifiez le code ci-dessous puis cliquez sur "Run" pour le tester:
 

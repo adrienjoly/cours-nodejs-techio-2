@@ -14,11 +14,8 @@ describe("le programme devrait", () => {
     expect(program.getLogs().length > 0).to.be(true);
   });
 
-  it("n'inclure que l'erreur telle quelle dans la sortie standard", () => {
+  it("n'inclure que l'erreur (telle quelle) dans la sortie standard", () => {
     expect(program.getLogs().join("").trim()).to.match(/^Error: /);
-  });
-
-  it("permettre de savoir que le serveur interrogé n'existe pas", () => {
     expect(program.getLogs().join("")).to.match(/ENOTFOUND/);
     congratulateStudent();
   });
