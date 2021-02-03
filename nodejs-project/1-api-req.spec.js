@@ -17,15 +17,12 @@ describe("le programme devrait", () => {
     expect(program.getLogs().length > 0).to.be(true);
   });
 
-  it("n'inclure que du JSON pur dans la sortie standard", () => {
+  it("n'écrire que la réponse (format JSON) de la requête", () => {
     expect(program.getLogs().join("").trim()).to.match(/^\{/);
-  });
-
-  it("afficher la réponse au format JSON, telle quelle", () => {
     JSON.parse(program.getLogs().join("").trim());
   });
 
-  it("afficher la réponse de l'API", () => {
+  it("écrire correctement la réponse retournée par l'API", () => {
     const json = JSON.parse(program.getLogs().join("").trim());
     //assert(/hello/i.test(logged.join()));
     expect(json).to.eql(EXPECTED_RESPONSE);

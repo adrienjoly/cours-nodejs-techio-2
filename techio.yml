@@ -1,6 +1,6 @@
 title: Node.js – Partie 2
 plan:
-- title: Envoi de requête à une API externe
+- title: Envoi de requête à l'aide d'un _callback_
   statement: markdowns/1-api-req.md
 - title: Gestion d'erreurs de callback
   statement: markdowns/2-callback-error.md
