@@ -17,7 +17,7 @@ describe("le programme devrait", () => {
     expect(program.getLogs().length > 0).to.be(true);
   });
 
-  it("n'écrire que la réponse (format JSON) de la requête", () => {
+  it("n'écrire que le texte de la réponse à la requête, tel quel", () => {
     expect(program.getLogs().join("").trim()).to.match(/^\{/);
     JSON.parse(program.getLogs().join("").trim());
   });

@@ -16,7 +16,7 @@ describe("le programme devrait", () => {
     expect(program.getErrors().join("").trim()).to.be("please provide a URL");
   });
 
-  it(`afficher la réponse JSON dans la sortie standard, si une URL valide est fournie`, async () => {
+  it(`afficher la réponse dans la sortie standard, si une URL valide est fournie`, async () => {
     const program = await runStudentCode(CODE_FILE, {
       args: ["https://jsonplaceholder.typicode.com/photos/1"],
     });
